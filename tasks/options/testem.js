@@ -11,7 +11,7 @@ module.exports = {
       src_files: [
         "test/index.html",
         "tmp/tests.amd.js",
-        "dist/torii.amd.js"
+        "dist/torii-cjr.amd.js"
       ],
       launch_in_dev: ['PhantomJS', 'Chrome'],
       launch_in_ci: ['PhantomJS', 'Chrome'],
@@ -28,7 +28,7 @@ module.exports = {
       src_files: [
         "test/index.html",
         "tmp/tests.amd.js",
-        "dist/torii.amd.js"
+        "dist/torii-cjr.amd.js"
       ],
       launch_in_dev: ['PhantomJS',
                      'Chrome',

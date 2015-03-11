@@ -20,7 +20,7 @@ module.exports = {
         // build-time configuration since this code will not be run again if
         // config/environment changes.
         tree = this.replace(tree, {
-          files: ['torii/torii.amd.js'],
+          files: ['torii/torii-cjr.amd.js'],
           patterns: [{
             match: /get\(window, 'ENV\.torii'\)/,
             replacement: 'require("'+this.app.name+'/config/environment")["default"].torii'
@@ -36,7 +36,7 @@ module.exports = {
 
   },
   included: function included(app) {
-    app.import('vendor/torii/torii.amd.js', {
+    app.import('vendor/torii/torii-cjr.amd.js', {
       exports: {
         'torii/torii': ['default'],
 
