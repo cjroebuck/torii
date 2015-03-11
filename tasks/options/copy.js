@@ -8,7 +8,7 @@ module.exports = {
 
   vendorAddOn: {
     cwd: 'dist',
-    src: 'torii.amd.js',
+    src: 'torii-cjr.amd.js',
     dest: 'dist/addon/vendor/torii/',
     expand: true
   }
