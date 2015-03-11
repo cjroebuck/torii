@@ -1,6 +1,6 @@
 /**
  * Torii version: 0.2.2
- * Built: Mon Nov 17 2014 15:17:01 GMT-0500 (EST)
+ * Built: Wed Mar 11 2015 12:36:53 GMT+0000 (GMT)
  */
 define("torii/adapters/application", 
   ["exports"],
@@ -664,7 +664,7 @@ define("torii/providers/facebook-connect",
           FB.init(settings);
           Ember.run(null, resolve);
         };
-        $.getScript('//connect.facebook.net/en_US/all.js');
+        $.getScript('//connect.facebook.net/en_US/sdk.js');
       }).then(function(){
         window.fbAsyncInit = original;
       });
@@ -715,6 +715,7 @@ define("torii/providers/facebook-connect",
           status: true,
           cookie: true,
           xfbml: false,
+          version: 'v2.0',
           appId: this.get('appId')
         };
       },
@@ -818,9 +819,11 @@ define("torii/providers/google-oauth2",
 
       // additional params that this provider requires
       requiredUrlParams: ['state'],
-      optionalUrlParams: ['scope', 'request_visible_actions'],
+      optionalUrlParams: ['scope', 'request_visible_actions', 'access_type'],
 
       requestVisibleActions: configurable('requestVisibleActions', ''),
+
+      accessType: configurable('accessType', ''),
 
       responseParams: ['code'],
 
